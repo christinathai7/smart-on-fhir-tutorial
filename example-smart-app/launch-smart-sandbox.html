@@ -31,6 +31,19 @@
         'client_id': 'YOUR-SMART-HEALTH-IT-CLIENT-ID-HERE',
         'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
       });
+      
+      import 'cerner-smart-embeddable-lib';
+      // webpack.config.js
+const webpack = require('webpack');
+
+module.exports = {
+  /*...*/
+  plugins:[
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
+  ]
+};
     </script>
     <div class="spinner">
       <div class="bounce1"></div>
